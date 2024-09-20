@@ -15,32 +15,33 @@
                 <div class="display">
                   <div class="artboard artboard-demo phone-2 bg-white">
                     <!-- segment : Available Balance -->
-                    <div class="stats -mt-[0px] -ml-40 flex justify-center items-center ">
+                    <div style="position: fixed; top: 0px;" class="stats mt-10 -ml-40 flex justify-center items-center ">
                         <div>
                             <img style="width: 60px;" src="resources/payoo.png" alt="">
                         </div>
                         <div class="stat border-none">
-                          <div id="account-balance" class="font-bold text-lg mt-0 -ml-2">$19,400</div>
+                          <div id="account-balance" class="font-bold text-lg mt-0 -ml-2">$ 19400</div>
                           <div class="stat-desc mb-0 -ml-2 font-medium">Available Balance</div>
                         </div>
+                        <div class="divider mt-0 mb-0"></div>
+                        <hr>
                     </div>
-                    <div class="divider -mt-3"></div>
-
+                    <hr>
+                   
                     <!-- Segment : Welcome -->
-                    <h1 class="font-bold text-lg -ml-40">Welcome to Payoo! 🔥</h1>
-                    <p class="text-xs text-gray-400 font-medium -ml-9 mt-3">Enjoy easy and convenient financial services with us.<br> Cashout charge is low. </p>
+                    <h1 style="position: fixed; top: 120px;" class="font-bold text-lg -ml-40">Welcome to Payoo! 🔥</h1>
+                    <p style="position: fixed; top: 140px;" class="text-xs text-gray-400 font-medium -ml-9 mt-3">Enjoy easy and convenient financial services with us.<br> Cashout charge is low. </p>
 
-                    <div class="mt-10 flex gap-x-10">
-                        <button class="btn btn-active bg-white hover:bg-blue-50 hover:text-blue-500 hover:border-blue-400">Add Money</button>
-                        <button class="btn btn-active bg-white hover:bg-blue-50 hover:text-blue-500 hover:border-blue-400">Cashout</button>
+                    <div style="position: fixed; top: 190px;" class="mt-5 flex gap-x-10">
+                        <button id="btn-addmoney" class="btn btn-active bg-white hover:bg-blue-50 hover:text-blue-500 hover:border-blue-400">Add Money</button>
+                        <button id="btn-cashout" class="btn btn-active bg-white hover:bg-blue-50 hover:text-blue-500 hover:border-blue-400">Cashout</button>
                     </div>
-                    <div class="divider"></div>
 
                     <!-- Segment -->
-                    <div>
+                    <div id="hide-addmoney" class="hidden" style="position: fixed; top: 290px;">
                         <h2 class="font-bold text-sm -ml-44 mb-3">Add Money</h2>
                     </div>
-                    <div class="card w-4/5 shadow-xl">
+                    <div id="hide-addmoney-card" style="top: 150px;" class="hidden card w-4/5 shadow-xl">
                         <form class="card-body">
                           <div class="form-control -mt-10">
                             <label class="label">
@@ -59,14 +60,39 @@
                           </div>
                         </form>
                     </div>
+                    <!-- Segment : Cashout -->
+                    <div id="hide-cashout" class="hidden" style="position: fixed; top: 290px;">
+                      <h2 class="font-bold text-sm -ml-44 mb-3">Cashout</h2>
+                  </div>
+                  <div id="hide-cashout-card" style="top: 150px;" class="hidden card w-4/5 shadow-xl">
+                      <form class="card-body">
+                        <div class="form-control -mt-10">
+                          <label class="label">
+                            <span class="label-text font-medium">Amount</span>
+                          </label>
+                          <input id="input-cashout" type="text" placeholder="Enter amount" class="input input-bordered hover:border-blue-400" required />
+                        </div>
+                        <div class="form-control">
+                          <label class="label">
+                            <span class="label-text font-medium">Pin</span>
+                          </label>
+                          <input id="pin-cashout" type="password" placeholder="Enter 4 digit pin" class="input input-bordered hover:border-blue-400" required />
+                        </div>
+                        <div class="form-control mt-6">
+                          <button id="btn-cash-out"  class="btn bg-[#0874F2] hover:border-2 text-white rounded-full  hover:bg-white hover:text-blue-500 hover:border-blue-400">Cashout</button>
+                        </div>
+                      </form>
+                  </div>
 
                     <!--Segment : Alert -->
-                    <div id="alert-box" style="display: none; background-color: #4caf50; color: white; padding: 10px; position: fixed; top: 15px; right: 10px; left: 50%; transform: translateX(-20%); z-index: 1000; border-radius: 10px;  width: 14%; text-align: center;">
+                    <div id="alert-box" style="display: none; background-color: #4caf50; color: white; padding: 7px 5px; position: fixed; top: 15px; right: 10px; left: 50%; transform: translateX(-50%); z-index: 1000; border-radius: 10px;  width: 14%; text-align: center;">
                       Money added successfully!
                   </div>
                 </div>
           </div>
     </main>
     <script src="Javascript/home.js"></script>
+    <script src="Javascript/addMoney.js"></script>
+    <script src="Javascript/cashout.js"></script>
 </body>
 </html>

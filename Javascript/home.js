@@ -1,40 +1,30 @@
-const btnAddMoney = document.getElementById('btn-add-money');
-btnAddMoney.addEventListener("click", (event) => {
-    event.preventDefault();
-    // console.log("add money btn clicked");
+const btnAdd = document.getElementById('btn-addmoney');
+const btnOut = document.getElementById('btn-cashout');
 
-    const inputAmount = document.getElementById('input-amount').value;
-    // console.log(inputAmount);
-    const amount = parseFloat(inputAmount);
+const hideAddmoney = document.getElementById('hide-addmoney');
+const hideAddmoneyCard = document.getElementById('hide-addmoney-card');
 
-    const pinNumber = document.getElementById('pin-number').value;
 
-    if(inputAmount !== '' && pinNumber !== '')
-    {
-        // console.log("money added");
+const hideCashout = document.getElementById('hide-cashout');
+const hideCashoutCard = document.getElementById('hide-cashout-card');
 
-        let accountBalance = document.getElementById('account-balance').innerText;
-        accountBalance = accountBalance.replace(/[^\d.-]/g, '');   // Remove any non-numeric characters (except for decimal points)
-        const balance = parseFloat(accountBalance);
-        // console.log(accountBalance);
+btnAdd.addEventListener("click", () => {
+   
+    hideCashout.style.display = 'none';
+    hideCashoutCard.style.display = 'none';
 
-        const updatedBalance = balance + amount;
-        // console.log(updatedBalance);
+    hideAddmoney.style.display = 'block';
+    hideAddmoneyCard.style.display = 'block';
 
-        document.getElementById('account-balance').innerText = updatedBalance;
+});
 
-        // Alert:  
-        const alertBox = document.getElementById('alert-box');
-        alertBox.style.display = 'block';
-        setTimeout(() => {
-            alertBox.style.display = 'none';
-        }, 2000); // 2000 milliseconds = 2 seconds
-    }
-    else
-    {
-        alert("Please enter your Amount & Pin number!");
-    }
-    
-    
-    
-})
+btnOut.addEventListener("click", () => {
+
+    hideAddmoney.style.display = 'none';
+    hideAddmoneyCard.style.display = 'none';
+
+    hideCashout.style.display = 'block';
+    hideCashoutCard.style.display = 'block';
+});
+
+
