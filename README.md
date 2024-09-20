@@ -1,7 +1,7 @@
 
 <h2 align="center"> 🌟 Payoo Mobile Finance System! 🌟</h2>
 
-<h6> Manage your finances effortlessly with our user-friendly app! ✨ </h6>
+<h5> Manage your finances effortlessly with our user-friendly app! ✨ </h5>
 
 ### Features :
 - 🔒 **Secure Login:** Access your account with your phone number and PIN for maximum security.
@@ -18,5 +18,5 @@
 
 - 🔑 **Forgot PIN Recovery:** Quickly recover your PIN if you forget it with our easy-to-use feature.
 
-<h5> 💡 Take control of your finances today! Download now and start managing your money smarter! 💰 </h5>
+<h5> Take control of your finances today! Download now and start managing your money smarter! 💰 </h5>
 
