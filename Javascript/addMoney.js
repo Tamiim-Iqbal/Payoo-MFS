@@ -26,6 +26,8 @@ btnAddMoney.addEventListener("click", (event) => {
         // Alert:  
         const alertBox = document.getElementById('alert-box');
         alertBox.style.display = 'block';
+        alertBox.innerText = "Money added successfully!";
+        
         setTimeout(() => {
             alertBox.style.display = 'none';
         }, 2000); // 2000 milliseconds = 2 seconds

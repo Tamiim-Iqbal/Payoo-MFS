@@ -8,17 +8,43 @@ document.getElementById('btn-login')
         const phoneNumber = document.getElementById('phone-number').value;
         console.log(phoneNumber);
 
-        const pinNumber = document.getElementById('pin-number').value;
+        const pinNumber = document.getElementById('pin').value;
         console.log(pinNumber);
+
+        const home = document.getElementById('home-section');
+        const hideLogin = document.getElementById('login-section');
 
         // temporary uses
         if(phoneNumber !== '' && pinNumber !== '')
         {
             console.log("You are logged in");
-            window.location.href = '/home.html';
+            home.style.display = 'block';
+            
+            hideLogin.style.display = 'none';
+
+            //Alert
+            const alertBox = document.getElementById('alert-box');
+            alertBox.style.display = 'block';
+            alertBox.innerText = "Login successful!";
+            setTimeout(() => {
+            alertBox.style.display = 'none';
+            }, 2000); // 2000 milliseconds = 2 seconds
         }
         else
         {
             alert("Please enter your Phone & Pin number!");
         }
-    })
+});
+
+const forgetPass = document.getElementById('forget-pass');
+forgetPass.addEventListener ("click", () => {
+
+    //Alert
+    const alertBox = document.getElementById('alert-box');
+    alertBox.style.display = 'block';
+    alertBox.style.backgroundColor = "#f44336";
+    alertBox.innerText = "Muri kha!"
+    setTimeout(() => {
+        alertBox.style.display = 'none';
+    }, 2000);
+})
