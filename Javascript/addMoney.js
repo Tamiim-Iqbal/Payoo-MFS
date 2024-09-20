@@ -26,6 +26,7 @@ btnAddMoney.addEventListener("click", (event) => {
         // Alert:  
         const alertBox = document.getElementById('alert-box');
         alertBox.style.display = 'block';
+        alertBox.style.backgroundColor = "#4caf50";
         alertBox.innerText = "Money added successfully!";
         
         setTimeout(() => {

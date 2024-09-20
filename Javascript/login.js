@@ -25,6 +25,7 @@ document.getElementById('btn-login')
             //Alert
             const alertBox = document.getElementById('alert-box');
             alertBox.style.display = 'block';
+            alertBox.style.backgroundColor = "#4caf50";
             alertBox.innerText = "Login successful!";
             setTimeout(() => {
             alertBox.style.display = 'none';
